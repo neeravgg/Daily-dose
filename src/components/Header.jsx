@@ -3,9 +3,13 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import AccountCircle from "@mui/icons-material/AccountCircle";
 import Hamburger from "./Hamburger";
-import { Menu, MenuItem, styled, Typography, MenuIcon } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import {
+  styled,
+  Typography,
+  CardActionArea,
+} from "@mui/material";
 
 export default function MenuAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -35,10 +39,13 @@ export default function MenuAppBar() {
           <Hamburger />
 
           {/* Logo */}
-          <Box sx={{ display: "inline-flex", alignItems: "center" }}>
+          <CardActionArea
+            href={"/"}
+            sx={{ display: "inline-flex", alignItems: "center" }}
+          >
             <img height={40} src='/logo192.png' />
             <Logotext>Daily Dose</Logotext>
-          </Box>
+          </CardActionArea>
           {/* Search */}
           <IconButton
             size='large'
@@ -47,27 +54,8 @@ export default function MenuAppBar() {
             aria-haspopup='true'
             color='#000000'
           >
-            <AccountCircle />
+            <SearchIcon />
           </IconButton>
-
-          <Menu
-            id='menu-appbar'
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "center",
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "center",
-            }}
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-          </Menu>
         </ToolBox>
       </AppBar>
     </Box>

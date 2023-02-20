@@ -31,7 +31,7 @@ export default function AccountMenu() {
             aria-haspopup='true'
             aria-expanded={open ? "true" : undefined}
           >
-            <MenuIcon/>
+            <MenuIcon />
           </IconButton>
         </Tooltip>
       </Box>
