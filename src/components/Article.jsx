@@ -46,8 +46,6 @@ const Title = styled(Typography)`
   line-height: 27px;
 `;
 
-
-
 const Description = styled(Typography)`
   line-height: 22px;
   color: #44444d;
@@ -55,8 +53,6 @@ const Description = styled(Typography)`
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 `;
-
-
 
 const Publisher = styled(Typography)`
   font-size: 12px;
@@ -76,7 +72,7 @@ const Article = ({ article }) => {
             </Grid>
             <RightContainer lg={7} md={7} sm={7} xs={12} item>
               <Title>{article.title}</Title>
-             
+
               <Description>{article.description}</Description>
               <Publisher>Click to read more</Publisher>
             </RightContainer>
