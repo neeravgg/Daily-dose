@@ -28,7 +28,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignUp() {
+export default function About() {
   return (
     <ThemeProvider theme={theme}>
       <Container component='main' maxWidth='xs'>

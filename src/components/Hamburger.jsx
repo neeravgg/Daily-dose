@@ -7,9 +7,9 @@ import Tooltip from "@mui/material/Tooltip";
 import Logout from "@mui/icons-material/Logout";
 import MenuIcon from "@mui/icons-material/Menu";
 import ContactsIcon from "@mui/icons-material/Contacts";
-import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
-import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
+import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import { Menu, MenuItem, Typography, styled } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 

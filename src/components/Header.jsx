@@ -5,15 +5,9 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Hamburger from "./Hamburger";
 import SearchIcon from "@mui/icons-material/Search";
-import {
-  styled,
-  Typography,
-  CardActionArea,
-
-} from "@mui/material";
+import { styled, Typography, CardActionArea } from "@mui/material";
 
 export default function MenuAppBar() {
-
   const ToolBox = styled(Toolbar)({
     justifyContent: "space-between",
   });
@@ -35,7 +29,7 @@ export default function MenuAppBar() {
             href={"/"}
             sx={{ display: "inline-flex", alignItems: "center" }}
           >
-            <img height={40} src='/logo192.png' alt ="logo" />
+            <img height={40} src='/logo192.png' alt='logo' />
             <Logotext>Daily Dose</Logotext>
           </CardActionArea>
           {/* Search */}
