@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Hamburger from "./Hamburger";
 import SearchIcon from "@mui/icons-material/Search";
-import { styled, Typography, CardActionArea } from "@mui/material";
+import { styled, Typography, CardActionArea, TextField } from "@mui/material";
 
 export default function MenuAppBar() {
   const ToolBox = styled(Toolbar)({
@@ -17,6 +17,7 @@ export default function MenuAppBar() {
     color: #000000;
     font-weight: bold;
   `;
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static' style={{ background: "#ffffff" }}>
@@ -33,6 +34,7 @@ export default function MenuAppBar() {
             <Logotext>Daily Dose</Logotext>
           </CardActionArea>
           {/* Search */}
+
           <IconButton
             size='large'
             aria-label='account of current user'
@@ -40,7 +42,22 @@ export default function MenuAppBar() {
             aria-haspopup='true'
             color='#000000'
           >
-            <SearchIcon />
+            <Box
+              sx={{
+                display: "inline-flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap : "3px"
+              }}
+            >
+              <TextField
+                size='small'
+                id='search'
+                label='Search'
+                variant='outlined'
+              />
+              <SearchIcon fontSize="large"/>
+            </Box>
           </IconButton>
         </ToolBox>
       </AppBar>
