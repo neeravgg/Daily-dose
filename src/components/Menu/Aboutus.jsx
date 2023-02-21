@@ -49,7 +49,7 @@ export default function About() {
           </Typography>
           <Box
             component='span'
-            sx={{ mt: 3, borderRadius: "16px", boxShadow: 1, padding: 5 }}
+            sx={{ mt: 3, borderRadius: "16px", boxShadow: 1, padding: 5, width: 500 }}
           >
             <Typography>
               Daily Dose is an Web app that summarizes news articles in 60 words
