@@ -1,30 +1,22 @@
-import { Box, styled } from "@mui/material";
-
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 //components
 import Header from "./components/Header";
-import InfoHeader from "./components/InfoHeader";
 import Articles from "./components/Articles";
-
-const Container = styled(Box)(({ theme }) => ({
-  width: "59%",
-  margin: "40px auto 0 auto",
-  [theme.breakpoints.down("md")]: {
-    width: "75%",
-  },
-  [theme.breakpoints.down("sm")]: {
-    width: "85%",
-  },
-}));
-
+import Login from "./components/Menu/login";
+import Contactus from "./components/Menu/Contactus";
 function App() {
   return (
-    <Box>
-      <Header/>
-      <Container>
-        <InfoHeader />
-        <Articles />
-      </Container>
-    </Box>
+    <BrowserRouter>
+      <div>
+        <Header />
+        <Routes>
+          <Route exact path='/' element={<Articles />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/contact' element={<Contactus />} />
+          <Route path='*' element={<Navigate to='/' replace={true} />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

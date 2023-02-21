@@ -9,18 +9,11 @@ import {
   styled,
   Typography,
   CardActionArea,
+
 } from "@mui/material";
 
 export default function MenuAppBar() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
   const ToolBox = styled(Toolbar)({
     justifyContent: "space-between",
   });
@@ -30,7 +23,6 @@ export default function MenuAppBar() {
     color: #000000;
     font-weight: bold;
   `;
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static' style={{ background: "#ffffff" }}>
@@ -43,7 +35,7 @@ export default function MenuAppBar() {
             href={"/"}
             sx={{ display: "inline-flex", alignItems: "center" }}
           >
-            <img height={40} src='/logo192.png' />
+            <img height={40} src='/logo192.png' alt ="logo" />
             <Logotext>Daily Dose</Logotext>
           </CardActionArea>
           {/* Search */}

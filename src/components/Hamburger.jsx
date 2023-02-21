@@ -1,15 +1,17 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Avatar from "@mui/material/Avatar";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
-import PersonAdd from "@mui/icons-material/PersonAdd";
-import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Menu, MenuItem, styled } from "@mui/material";
+import ContactsIcon from "@mui/icons-material/Contacts";
+import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
+import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import { Menu, MenuItem, Typography, styled } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -20,6 +22,12 @@ export default function AccountMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const navigate = useNavigate();
+  const Option = styled(Box)`
+    display: inline-flex;
+    aligncontent: center;
+    gap: 10px;
+  `;
   return (
     <React.Fragment>
       <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
@@ -70,30 +78,37 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <MenuItem onClick={handleClose}>
-          <Avatar /> Profile
+        <MenuItem onClick={() => navigate("/login")}>
+          <Option>
+            <ContactsIcon />
+            <Typography>Profile</Typography>
+          </Option>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Avatar /> My account
+        <MenuItem onClick={() => navigate("/login")}>
+          <Option>
+            <InfoRoundedIcon />
+            <Typography>About us</Typography>
+          </Option>
+        </MenuItem>
+        <MenuItem onClick={() => navigate("/contact")}>
+          <Option>
+            <LocalPhoneRoundedIcon />
+            <Typography>Contact us</Typography>
+          </Option>
+        </MenuItem>
+        <MenuItem onClick={() => navigate("/")}>
+          <Option>
+            <HomeRoundedIcon />
+            <Typography>Home</Typography>
+          </Option>
         </MenuItem>
         <Divider />
-        <MenuItem onClick={handleClose}>
-          <ListItemIcon>
-            <PersonAdd fontSize='small' />
-          </ListItemIcon>
-          Add another account
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <ListItemIcon>
-            <Settings fontSize='small' />
-          </ListItemIcon>
-          Settings
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
+
+        <MenuItem onClick={() => navigate("/login")}>
           <ListItemIcon>
             <Logout fontSize='small' />
           </ListItemIcon>
-          Logout
+          Login/Signup
         </MenuItem>
       </Menu>
     </React.Fragment>
