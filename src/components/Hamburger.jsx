@@ -84,7 +84,7 @@ export default function AccountMenu() {
             <Typography>Profile</Typography>
           </Option>
         </MenuItem>
-        <MenuItem onClick={() => navigate("/login")}>
+        <MenuItem onClick={() => navigate("/about")}>
           <Option>
             <InfoRoundedIcon />
             <Typography>About us</Typography>
