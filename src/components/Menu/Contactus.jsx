@@ -20,7 +20,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color='inherit' href='https://dd-minor-prj.netlify.app/'>
+      <Link color='inherit' href='https://daily-dose-dd.netlify.app/'>
         Daily Dose
       </Link>{" "}
       {new Date().getFullYear()}
@@ -101,8 +101,8 @@ export default function Contact() {
                 <TextField
                   required
                   fullWidth
-                  name='Reason for Contacting'
-                  label='Reason for Contacting'
+                  name='Message'
+                  label='Message'
                   multiline
                   rows={4}
                   id='query'

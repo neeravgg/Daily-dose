@@ -28,7 +28,7 @@ export default function MenuAppBar() {
           {/* Logo */}
           <CardActionArea
             href={"/"}
-            sx={{ display: "inline-flex", alignItems: "center" }}
+            sx={{ display: "inline-flex", alignItems: "center", ml :"200px" }}
           >
             <img height={40} src='/logo192.png' alt='logo' />
             <Logotext>Daily Dose</Logotext>
