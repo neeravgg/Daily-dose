@@ -28,7 +28,7 @@ export default function MenuAppBar() {
           {/* Logo */}
           <CardActionArea
             href={"/"}
-            sx={{ display: "inline-flex", alignItems: "center", ml :"200px" }}
+            sx={{ display: "inline-flex", alignItems: "center" }}
           >
             <img height={40} src='/logo192.png' alt='logo' />
             <Logotext>Daily Dose</Logotext>
@@ -42,22 +42,9 @@ export default function MenuAppBar() {
             aria-haspopup='true'
             color='#000000'
           >
-            <Box
-              sx={{
-                display: "inline-flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gap : "3px"
-              }}
-            >
-              <TextField
-                size='small'
-                id='search'
-                label='Search'
-                variant='outlined'
-              />
+           
               <SearchIcon fontSize="large"/>
-            </Box>
+         
           </IconButton>
         </ToolBox>
       </AppBar>
